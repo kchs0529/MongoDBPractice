@@ -11,8 +11,8 @@
 3. [기술 스택](#기술-스택)
 4. [설치 방법](#설치-방법)
 5. [사용 방법](#사용-방법)
-6. [기여 방법](#기여-방법)
-7. [라이선스](#라이선스)
+
+
 
 ---
 
@@ -46,6 +46,8 @@
    ```bash
    git clone https://github.com/yourusername/your-project-name.git
 2. **필요한 라이브러리 설치**:
-   Maven을 사용하여 프로젝트에 필요한 모든 라이브러리를 설치합니다.
-   ```bash
-   mvn clean install
+   - MongoDB Java Driver JAR 파일을 다운로드
+   - 다운로드한 JAR 파일을 프로젝트의 `Build Path`에 추가
+    1. 프로젝트 우클릭 → `Build Path` → `Configure Build Path`.
+    2. `Libraries` 탭 → `Add External JARs` 클릭.
+    3. JAR 파일을 선택하고 적용합니다.
