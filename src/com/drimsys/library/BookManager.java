@@ -104,6 +104,12 @@ public class BookManager {
         Scanner scanner = new Scanner(System.in);
         System.out.print("삭제할 책 제목: ");
         String title = scanner.nextLine();
+        
+        Document found = bookCollection.find(Filters.eq("title", title)).first();
+        if (found == null) {
+            System.out.println("해당 제목의 책이 존재하지 않습니다.");
+            return;
+        }
 
         Document query = new Document("title", title);
         bookCollection.deleteOne(query);
